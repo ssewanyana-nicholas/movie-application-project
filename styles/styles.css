@@ -116,6 +116,16 @@ body {
     transition: transform 0.3s ease;
 }
 
+.listView {
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
 .movie-card:hover {
     transform: scale(1.05);
 }

@@ -9,12 +9,18 @@ const moviesContainer = document.querySelector('.movies-container');
 let moviesData = [];
 
 // Toggle views between grid and list
+
+
 gridViewButton.addEventListener('click', () => {
-    moviesContainer.style.display = 'grid';
+    moviesContainer.style.display = 'grid'; // Make the container visible
+    moviesContainer.classList.add('gridView'); // Apply the grid-view style
+    moviesContainer.classList.remove('listView'); // Remove list-view style
 });
 
 listViewButton.addEventListener('click', () => {
-    moviesContainer.style.display = 'block';
+    moviesContainer.style.display = 'block'; // Make the container visible
+    moviesContainer.classList.add('listView'); // Apply the list-view style
+    moviesContainer.classList.remove('gridView'); // Remove grid-view style
 });
 
 // Fetch movies data
@@ -127,7 +133,6 @@ function showMovieDetails(movie) {
     modalContent.appendChild(poster);
     modalContent.appendChild(movieTitle);
     modalContent.appendChild(movieDescription);
-    modalContent.appendChild(movieDirector);
     modalContent.appendChild(movieYear);
     modalContent.appendChild(movieRating);
     modalContent.appendChild(imdbLink);
