@@ -123,7 +123,6 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
 }
 
 .movie-card:hover {
@@ -203,4 +202,107 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1200px (Tablets and smaller desktops) */
+@media (max-width: 1200px) {
+    .movies-container {
+        grid-template-columns: repeat(3, 1fr); /* Display 3 columns */
+    }
+
+    .listView {
+        width: 90%; /* Make list view take up 90% of the width */
+    }
+
+    .menu button {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduce font size of the hero text */
+    }
+}
+
+/* For screens smaller than 992px (Tablets) */
+@media (max-width: 992px) {
+    .movies-container {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 columns */
+    }
+
+    .listView {
+        width: 90%; /* Make list view take up 90% of the width */
+        padding: 20px; /* Less padding for smaller screens */
+    }
+
+    .menu button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media (max-width: 768px) {
+    .header .search-bar input {
+        width: 180px; /* Adjust search input width */
+    }
+
+    .movies-container {
+        grid-template-columns: 1fr; /* Display 1 column for mobile */
+    }
+
+    .movie-card {
+        padding: 15px; /* Reduce padding for smaller cards */
+    }
+
+    .listView {
+        width: 100%; /* Make list view take up full width on mobile */
+        padding: 15px; /* Less padding for mobile */
+    }
+
+    .menu button {
+        font-size: 0.8rem;
+        padding: 7px 12px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For screens smaller than 480px (Very small screens like some phones) */
+@media (max-width: 480px) {
+    .header .search-bar input {
+        width: 150px; /* Make the search input more compact */
+    }
+
+    .movies-container {
+        grid-template-columns: 1fr; /* Ensure 1 column layout */
+    }
+
+    .menu button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
 }
